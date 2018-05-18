@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Check";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/Client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Assets/Client/css/responsiveslides.css">
+    <script src="~/Assets/Client/js/jquery.min.js"></script>
+    <script src="~/Assets/Client/js/responsiveslides.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="content">
+            <div class="single-page">
+                <h1>Kiểm tra watermark file nhạc</h1>
+                <p class="">
+                    <label>Uoload file wav</label>
+                    <input type="file" name="fileupload" />
+                    @ViewBag.Thongbao
+                </p>
+                <input type="submit" class="btn" id="submit" value="Upload">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

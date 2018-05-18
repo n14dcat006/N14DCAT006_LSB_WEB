@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var item = Model;
+}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/Client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Assets/Client/css/responsiveslides.css">
+    <script src="~/Assets/Client/js/jquery.min.js"></script>
+    <script src="~/Assets/Client/js/responsiveslides.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="content">
+            <div class="single-page">
+                <audio controls="controls" preload='none'>
+                    <source src="~/Music/@ViewBag.thumuc" type='audio/wav'/>
+                    <p>@item.TenBaiHat</p>
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/Client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Assets/Client/css/responsiveslides.css">
+    <script src="~/Assets/Client/js/jquery.min.js"></script>
+    <script src="~/Assets/Client/js/responsiveslides.min.js"></script>
+    <script>// You can also use "$(window).load(function() {"
+			    $(function () {
+
+			      // Slideshow 1
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 1600,
+			        speed: 600
+			      });
+			});</script>
+</head>
+<body>
+    <!---start-wrap--->
+    <div class="wrap">
+
+        <!--start-image-slider---->
+        <div class="image-slider">
+            <!-- Slideshow 1 -->
+            <ul class="rslides" id="slider1">
+                <li><img src="~/Assets/Client/images/slider1.jpg" alt=""></li>
+                <li><img src="~/Assets/Client/images/slider3.jpg" alt=""></li>
+                <li><img src="~/Assets/Client/images/slider1.jpg" alt=""></li>
+            </ul>
+            <!-- Slideshow 2 -->
+        </div>
+        
+        <!--End-image-slider---->
+        <div class="content">
+            <div class="products-box">
+                <div class="products">
+                    <h5><span>Nhạc Việt Nam</span> TOP</h5>
+                    <div class="section group">
+                        @foreach (var baihat in ViewBag.nhacviettop)
+                    {
+                        <a href="/BaiHat/Index?id=@baihat.MaBaiHat">
+                            <div class="grid_1_of_5 images_1_of_5">
+                                <img src="@baihat.AnhBiaBaiHat" width="137px" height="137px" alt="Ảnh bìa bài hát" />
+                                <h3>@baihat.TenBaiHat</h3>
+                                <p>@baihat.CaSi</p>
+                            </div>
+                        </a>
+                }
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+
+            <div class="products-box">
+                <div class="products">
+                    <h5><span>Nhạc Âu Mỹ</span> TOP</h5>
+                    <div class="section group">
+                        @foreach (var baihat in ViewBag.nhacAuMytop)
+                    {
+                        <a href="/BaiHat/Index?id=@baihat.MaBaiHat">
+                            <div class="grid_1_of_5 images_1_of_5">
+                                <img src="@baihat.AnhBiaBaiHat" width="137px" height="137px" alt="Ảnh bìa bài hát" />
+                                <h3>@baihat.TenBaiHat</h3>
+                                <p>@baihat.CaSi</p>
+                            </div>
+                        </a>
+                }
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+
+            <div class="products-box">
+                <div class="products">
+                    <h5><span>Nhạc Châu Á</span> TOP</h5>
+                    <div class="section group">
+                        @foreach (var baihat in ViewBag.nhacChauAtop)
+                    {
+                        <a href="/BaiHat/Index?id=@baihat.MaBaiHat">
+                            <div class="grid_1_of_5 images_1_of_5">
+                                <img src="@baihat.AnhBiaBaiHat" width="137px" height="137px" alt="Ảnh bìa bài hát" />
+                                <h3>@baihat.TenBaiHat</h3>
+                                <p>@baihat.CaSi</p>
+                            </div>
+                        </a>
+                }
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!---End-wrap--->
+</body>
+</html>
