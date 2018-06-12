@@ -19,10 +19,15 @@
     <div>
         <div class="content">
             <div class="single-page">
-                <audio controls="controls" preload='none'>
+                <h1>@item.TenBaiHat</h1><br />
+                <h3>@item.CaSi</h3>
+                <audio controls="controls" preload='none' style="width: 1000px;">
                     <source src="~/Music/@ViewBag.thumuc" type='audio/wav'/>
                     <p>@item.TenBaiHat</p>
                 </audio>
+                <br />
+                <h6>Lời bài hát: </h6>
+                <h6>@item.LoiBaiHat</h6>
             </div>
         </div>
     </div>

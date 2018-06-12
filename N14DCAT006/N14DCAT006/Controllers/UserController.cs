@@ -72,5 +72,6 @@ namespace N14DCAT006.Controllers
             Session["TaiKhoan"] = null;
             return RedirectToAction("Index", "Home");
         }
+        
     }
 }

@@ -17,13 +17,18 @@
     <div>
         <div class="content">
             <div class="single-page">
-                <h1>Kiểm tra watermark file nhạc</h1>
-                <p class="">
-                    <label>Uoload file wav</label>
-                    <input type="file" name="fileupload" />
-                    @ViewBag.Thongbao
-                </p>
-                <input type="submit" class="btn" id="submit" value="Upload">
+                @using (Html.BeginForm("Check", "BaiHat", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+    {
+            @Html.AntiForgeryToken()
+            <h1>Kiểm tra watermark file nhạc</h1>
+            <p class="">
+                <label>Uoload file wav</label>
+                <input type="file" name="fileupload" />
+                @ViewBag.Thongbao
+            </p>
+            <button type="submit" class="btn btn-primary btn-block" value="Upload" />
+}
+
             </div>
         </div>
     </div>

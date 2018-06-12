@@ -182,7 +182,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaiHatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -453,6 +453,11 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\CreateMusic.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\CreateAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\ManageMusic.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\ManageAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\ManageUser.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -481,6 +486,7 @@
     <Content Include="Views\User\DangNhap.cshtml" />
     <Content Include="Views\BaiHat\Index.cshtml" />
     <Content Include="Views\BaiHat\Check.cshtml" />
+    <Content Include="Views\BaiHat\KqCheck.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -321,6 +321,7 @@ namespace N14DCAT006.Controllers
         [HttpPost]
         public ActionResult Check(FormCollection collection, HttpPostedFileBase fileupload)
         {
+            string s4="";
             var filename = Path.GetFileName(fileupload.FileName);
             var path = Path.Combine(Server.MapPath("~/Check"), filename);
             if (System.IO.File.Exists(path))
@@ -333,12 +334,17 @@ namespace N14DCAT006.Controllers
                 using (Stream openStream = System.IO.File.OpenRead(path))
                 {
                     WaveStream wave2 = new WaveStream(openStream);
-                    string s4 = Extract(wave2);
+                    s4 = Extract(wave2);
                     ViewBag.Thongbao = s4;
                 }
             }
-            return View(this);
+            return RedirectToAction("KqCheck", new { kq = s4 });
 
+        }
+        public ActionResult KqCheck(String kq = "")
+        {
+            ViewBag.Kq = kq;
+            return View();
         }
     }
 }
